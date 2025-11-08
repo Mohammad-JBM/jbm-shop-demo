@@ -1,0 +1,1122 @@
+/* ===============================
+   FONT
+================================= */
+@font-face {
+    font-family: 'NotoSerif';
+    src: url('font/Roboto-VariableFont_wdth\,wght.ttf');
+}
+
+/* ===============================
+   RESET / GLOBAL
+================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'NotoSerif', serif;
+}
+
+.contrast-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+    backdrop-filter: contrast(100%);
+    transition: backdrop-filter 0.3s ease;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 100;
+}
+
+header .logo span {
+    font-size: 1.6em;
+    font-weight: 900;
+    color: rgb(49, 49, 49);
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(96, 96, 96);
+    padding: 10px 15px;
+    margin-left: 10px;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.6s ease;
+}
+
+header a:hover {
+    border-bottom: 2px solid gray;
+}
+
+header .authorize {
+    background-color: rgb(173, 173, 173);
+    padding: 12px 20px;
+    border-radius: 30px;
+    color: white;
+    transition: .6s;
+}
+
+header .authorize>span {
+    font-size: 14px;
+    padding: 10px;
+    transition: .6s;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+header .authorize>span:hover {
+    background-color: white;
+    color: black;
+}
+
+
+.header-pill {
+    padding: 10px 15px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+}
+
+.header-pill:hover {
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+/* ===============================
+   HAMBURGER
+================================= */
+.hamber {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.6s ease;
+}
+
+.hamber i {
+    color: rgb(140, 140, 140);
+}
+
+.hamberRotate {
+    transform: rotate(-90deg);
+}
+
+/* ===============================
+   MOBILE NAV
+================================= */
+.mobileNav {
+    display: inline-block;
+    position: fixed;
+    top: 120px;
+    right: -190px;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.589);
+    padding: 20px;
+    width: 200px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.6s ease;
+    z-index: 99;
+}
+
+.mobileNav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+
+/* ===============================
+   OPTIONS / BASKET
+================================= */
+.options {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.options .basket {
+    background-color: rgb(173, 173, 173);
+    text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.options .basket span {
+    position: absolute;
+    top: 6px;
+    right: -8px;
+    min-width: 22px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 12px;
+    border-radius: 50%;
+    background: rgb(109, 109, 109);
+    color: #fff;
+    text-align: center;
+    padding: 0 6px;
+    pointer-events: none;
+}
+
+.options .basket i {
+    font-size: 1.5em;
+    color: white;
+}
+
+/* ===============================
+   Herosection
+================================= */
+.herosection {
+    background: url(img/breadcrumb.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.herosection h1 {
+    font-size: 30px;
+}
+
+.herosection span {
+    font-size: 13px;
+    margin-top: 1em;
+}
+
+.category {
+    position: relative;
+    top: -5em;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.category .item {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.category .item .image {
+
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.category .item .image img {
+    border-radius: 50%;
+    transition: .6s;
+}
+
+.category .item:hover img {
+    transform: scale(1.1);
+}
+
+.category .item h3 {
+    font-size: .95em;
+    margin-top: 2em;
+    color: rgb(64, 64, 64);
+}
+
+
+/* ===============================
+   Product Sections
+================================= */
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: rgb(219, 219, 219);
+    width: 98%;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 4em;
+}
+
+.heading .infoR {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.heading .infoR span {
+    font-size: 14px;
+}
+
+.heading .infoR i {
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.heading .infoL span {
+    color: rgb(60, 60, 60);
+    font-size: 13px;
+    padding: 15px;
+}
+
+
+/* Products */
+
+.products {
+    margin-top: 2em;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0px 20px;
+}
+
+.products .product {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 10px;
+    width: 25%;
+    height: 400px;
+    text-align: left;
+    margin-top: 1.5em;
+}
+
+.products .product .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    overflow: hidden;
+    background-color: #E8E8E8;
+    border-radius: 10px;
+}
+
+.products .product h4 {
+    margin-top: 1em;
+}
+
+.products .product span {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.products .product a {
+    padding: 10px;
+    margin-top: 1.9em;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: gray;
+    border-radius: 10px;
+    transition: .6s;
+    cursor: pointer;
+}
+
+.products .product a:hover {
+    background-color: rgb(0, 155, 0);
+}
+
+/* ===============================
+   Footer
+================================= */
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 5em;
+    padding: 1.6em;
+    border-top: 1px solid rgb(158, 158, 158);
+    border-bottom: 1px solid rgb(158, 158, 158);
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(96, 96, 96);
+    margin-top: 20px;
+    display: block;
+    transition: 0.2s;
+}
+
+footer a:hover {
+    color: #E9442A;
+}
+
+footer h5 {
+    font-size: 1.1em;
+}
+
+/* Social Section */
+footer .social {
+    padding: 10px;
+    width: 40%;
+}
+
+footer .social span {
+    font-weight: 900;
+    font-size: 2em;
+}
+
+footer .social p {
+    margin-top: 1em;
+    font-size: .9em;
+}
+
+footer .social h5 {
+    font-size: 1.2em;
+    margin-top: 2em;
+}
+
+footer .social .logo {
+    display: flex;
+}
+
+footer .social .logo i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(206, 206, 206);
+    border-radius: 50%;
+    color: black;
+    font-size: 1.5em;
+    line-height: 1;
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+/* Info Section */
+
+footer .info {
+    text-align: left;
+    padding: 10px;
+    width: 20%;
+}
+
+
+/* Support Section */
+
+footer .support {
+    text-align: left;
+    padding: 10px;
+    width: 20%;
+}
+
+footer .account {
+    text-align: left;
+    padding: 10px;
+    width: 20%;
+}
+
+.ceator {
+    background-color: rgb(184, 184, 184);
+    padding: 10px;
+    text-align: center;
+}
+
+/* ===============================
+   Discount
+================================= */
+
+.discount {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.425);
+    transition: .6s;
+}
+
+.discountShown {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+.discount .content {
+    display: flex;
+    border-radius: 10px;
+    background-color: white;
+    width: 65%;
+    height: 75%;
+    position: relative;
+}
+
+.discount .content .close {
+    cursor: pointer;
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: .4s;
+}
+
+.discount .content .close:hover {
+    background-color: rgb(201, 201, 201);
+}
+
+
+.discount .content .left {
+    background: url(img/newsletter-popup.avif);
+    width: 45%;
+    background-size: cover;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.discount .content .right {
+    margin: auto;
+    text-align: center;
+    width: 55%;
+    justify-content: flex-end;
+}
+
+.discount .content .right h2 {
+    font-size: 1em;
+    color: #E9442A;
+    margin-bottom: 10px;
+}
+
+.discount .content .right h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.discount .content .right p {
+    font-size: 1em;
+    margin-bottom: 40px;
+}
+
+.discount .content .right span {
+    font-size: 1.2em;
+    background-color: rgb(203, 203, 203);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+
+/* ===============================
+   Product Basket Popup
+================================= */
+
+.myBasket {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.36);
+    display: flex;
+    justify-content: flex-end;
+    visibility: hidden;
+    opacity: 0;
+    transition: linear .8s;
+}
+
+.showMyBasket {
+    visibility: visible;
+    opacity: 1;
+}
+
+.contentShow {
+    right: 0px !important;
+}
+
+.myBasket .content {
+    width: 27%;
+    background-color: white;
+    position: relative;
+    right: -500px;
+    transition: ease .8s;
+}
+
+.myBasket .content .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 1px 2px 5px rgb(184, 184, 184);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: linear .3s;
+}
+
+.myBasket .content .close:hover {
+    box-shadow: 0px 0px 0px black;
+    background-color: rgb(236, 236, 236);
+}
+
+.myBasket .content .head {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    height: 10%;
+    border-bottom: rgb(209, 209, 209) solid 1px;
+}
+
+.myBasket .content .head i {
+    font-size: 1.3em;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+.myBasket .content .productsInBasket {
+    height: 70%;
+    overflow-y: auto;
+}
+
+.myBasket .content .productsInBasket .product {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.myBasket .content .productsInBasket .product img {
+    width: 20%;
+    margin-right: 10px;
+}
+
+.myBasket .content .productsInBasket .product .delete {
+    /* width: 15%; */
+    cursor: pointer;
+    padding: 5px;
+    background-color: #E8E8E8;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 1px 2px 5px rgb(184, 184, 184);
+    transition: linear .3s;
+}
+
+.myBasket .content .productsInBasket .product .delete:hover {
+    box-shadow: 0px 0px 0px black;
+    background-color: rgb(236, 236, 236);
+}
+
+.myBasket .content .productsInBasket .product .information {
+    width: 65%;
+    padding: 0 20px;
+}
+
+.myBasket .content .productsInBasket .product .information span {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.myBasket .content .productsInBasket .product .information i {
+    font-size: 13px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.myBasket .content .productsInBasket .product .information .count {
+    color: #585858;
+    background-color: #E8E8E8;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.myBasket .content .productsInBasket .product .information .price {
+    padding: 5px;
+}
+
+
+.myBasket .content .payment {
+    padding: 15px;
+    border-top: rgb(209, 209, 209) solid 1px;
+    height: 10%;
+}
+
+.myBasket .content .payment .total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+
+
+.myBasket .content .payBTN {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    padding: 15px;
+}
+
+.myBasket .content .payBTN .payButton {
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid rgb(158, 158, 158);
+    background-color: #efefef;
+    border-radius: 8px;
+    transition: .5s;
+    font-size: 15px;
+}
+
+.myBasket .content .payBTN .payButton:hover {
+    color: white;
+    background-color: rgb(0, 155, 0);
+}
+
+
+/* ===============================
+   Successfull Message
+================================= */
+.successful {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.36);
+}
+
+.successful {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999999;
+    background-color: rgba(0, 0, 0, 0.36);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: linear .8s;
+}
+
+.showSuccessfull {
+    visibility: visible;
+    opacity: 1;
+}
+
+.successful .data {
+    font-size: 1.4em;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 40%;
+    background-color: rgb(79, 79, 79);
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+}
+
+
+/* ===============================
+   Final Purchase
+================================= */
+.buy {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #00000058;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: linear .5s;
+}
+
+.showBuySection {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.buy .contents {
+    border-radius: 10px;
+    width: 30%;
+    height: 40%;
+    background-color: white;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.buy .contents .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 1px 2px 5px rgb(184, 184, 184);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: linear .3s;
+}
+
+.buy .contents .close:hover {
+    box-shadow: 0px 0px 0px black;
+    background-color: rgb(236, 236, 236);
+}
+
+.buy .contents .money {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60%;
+}
+
+.buy .contents .discountInput {
+    margin-top: 2em;
+    display: flex;
+    align-items: flex-end;
+    height: 20%;
+}
+
+
+.buy .contents .discountInput input {
+    width: 220px;
+    border: 1px solid rgb(158, 158, 158);
+    border-radius: 4px;
+    padding: 5px;
+}
+
+@keyframes incorrect {
+    from {
+        box-shadow: #e9432a00 0px 0px 10px;
+    }
+
+    to {
+        box-shadow: #e9432a 0px 0px 10px;
+    }
+}
+
+.incorrectCode {
+    animation: incorrect .6s 0s 4 alternate linear;
+}
+
+.buy .contents .discountInput .activateDiscount {
+    cursor: pointer;
+    border: 1px solid rgb(158, 158, 158);
+    background-color: #efefef;
+    border-radius: 4px;
+    padding: 5px 20px;
+    transition: .5s;
+}
+
+.buy .contents .discountInput .activateDiscount:hover {
+    background-color: #d7d7d7;
+}
+
+
+.buy .contents .btn .buyBTN {
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid rgb(158, 158, 158);
+    background-color: #efefef;
+    border-radius: 8px;
+    transition: .5s;
+    font-size: 15px;
+}
+
+.buy .contents .btn {
+    height: 20%;
+}
+
+.buy .contents .btn .buyBTN:hover {
+    color: white;
+    background-color: rgb(0, 155, 0);
+}
+
+/* ===============================
+   access
+================================= */
+.access {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+.access .allOptions {
+    border-radius: 10px;
+    width: 15%;
+    height: 40%;
+    position: absolute;
+    left: -300px;
+    bottom: 10px;
+    background-color: rgba(128, 128, 128, 0.923);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    pointer-events: auto;
+    transition: ease .6s;
+}
+
+.showAllOptions {
+    left: 10px !important;
+    bottom: 10px;
+}
+
+.access .allOptions i {
+    margin-right: 10px;
+}
+
+.increaseContrast {
+    display: flex;
+    padding: 20px 0;
+    cursor: pointer;
+    border-bottom: 1px black solid;
+}
+
+.decreaseContrast {
+    display: flex;
+    padding: 20px 0;
+    cursor: pointer;
+    border-bottom: 1px black solid;
+}
+
+.increaseFontSize {
+    display: flex;
+    padding: 20px 0;
+    cursor: pointer;
+    border-bottom: 1px black solid;
+}
+
+.decreaseFontSize {
+    display: flex;
+    cursor: pointer;
+    padding: 20px 0;
+}
+
+
+
+.eye {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    background-color: #b8b8b8;
+    padding: 13px;
+    font-size: 1.1em;
+    border-radius: 50%;
+    visibility: visible;
+    transition: linear .5s;
+    cursor: pointer;
+}
+
+.access .allOptions .close {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(162, 162, 162);
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: .4s;
+}
+
+.access .allOptions .close:hover {
+    background-color: rgb(201, 201, 201);
+}
+
+.hideEye {
+    visibility: hidden;
+}
+
+/* ===============================
+RESPONSIVE
+================================= */
+@media screen and (max-width: 1049px) {
+
+    header nav,
+    .authorize {
+        display: none;
+    }
+
+    .hamber {
+        display: inline-block;
+    }
+
+    .mobileNav nav {
+        display: inline-block;
+    }
+
+    .mobileNavCliked {
+        right: 10px;
+        opacity: 1;
+    }
+
+    .category .item {
+        width: 50%;
+        margin-bottom: 2em;
+    }
+
+    .products .product {
+        width: 50%;
+    }
+
+    footer .social {
+        width: 100%;
+    }
+
+    footer .info {
+        margin-top: 30px;
+        width: 30%;
+    }
+
+    footer .support {
+        margin-top: 30px;
+        width: 30%;
+    }
+
+    footer .account {
+        margin-top: 30px;
+        width: 30%;
+    }
+
+    .discount .content {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .discount .content .left {
+        height: 50%;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .discount .content .right {
+        margin-top: 40px;
+        height: 50%;
+        width: 100%;
+    }
+
+    .myBasket .content {
+        width: 60%;
+    }
+
+    .successful .data {
+        width: 60%;
+        height: 40%;
+    }
+
+    .buy .contents {
+        width: 60%;
+        height: 40%;
+    }
+
+    .access .allOptions {
+        width: 38%;
+    }
+
+}
+
+@media screen and (max-width: 438px) {
+    .category .item {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    .products .product {
+        width: 100%;
+    }
+
+    footer .social {
+        width: 100%;
+    }
+
+    footer .info {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    footer .support {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    footer .account {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .discount .content .left {
+        height: 30%;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .myBasket .content {
+        width: 100%;
+    }
+
+    .successful .data {
+        text-align: center;
+        width: 90%;
+        height: 40%;
+    }
+
+    .buy .contents {
+        width: 90%;
+        height: 40%;
+    }
+
+    .access .allOptions {
+        width: 80%;
+    }
+}
